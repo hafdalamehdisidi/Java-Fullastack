@@ -1,7 +1,6 @@
 package com.sidi.crudfullstack.crud_fullstack_angular.controller;
 
 import com.sidi.crudfullstack.crud_fullstack_angular.Service.CustomerService;
-import com.sidi.crudfullstack.crud_fullstack_angular.Service.CustomerServiceImplements;
 import com.sidi.crudfullstack.crud_fullstack_angular.entity.Customer;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +18,7 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public Customer save(@RequestBody Customer customer){
         return customerService.save(customer);
     }
